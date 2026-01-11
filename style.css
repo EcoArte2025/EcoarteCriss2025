@@ -1130,6 +1130,33 @@ html {
 }
 
 
+@media (max-width:991px) {
+    .menu {
+        padding: 20px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #ff9000;
+        display: none;
+    }
+
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+     .menu .navbar ul li a:hover {
+        color: #FFFFFF;
+     }
+
 
 
 
@@ -1339,34 +1366,111 @@ html {
 		font-size: 1.6rem;
 	}
 
-	/* ===== MENU MOVIL ===== */
-@media (max-width: 768px) {
 
-    .menu {
-        display: none;
-        flex-direction: column;
-        background-color: #c9a57a;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
+}
+
+
+}
+
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== HEADER ===== */
+.header {
+    width: 100%;
+}
+
+.container-navbar {
+    background: #c8a57a;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    position: relative;
+}
+
+/* LOGO */
+.container-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+/* ===== MENÚ DESKTOP ===== */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+/* ===== CHECKBOX OCULTO ===== */
+#menu-toggle {
+    display: none;
+}
+
+/* ===== BOTÓN HAMBURGUESA ===== */
+.menu-btn {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* ===== RESPONSIVE (MÓVIL) ===== */
+@media (max-width: 991px) {
+
+    /* Mostrar la rayita */
+    .menu-btn {
+        display: block;
     }
 
-    .menu.activo {
-        display: flex;
+    /* Ocultar menú */
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #b48445a9;
+        flex-direction: column;
+        display: none;
     }
 
     .menu li {
+        width: 100%;
         text-align: center;
-        padding: 15px 0;
     }
 
-    .menu-btn {
-        font-size: 26px;
-        cursor: pointer;
+    .menu li a {
         display: block;
+        padding: 15px;
+        color: #fff;
+    }
+
+    .menu li a:hover {
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    /* 👉 ABRIR MENÚ AL TOCAR LA RAYITA */
+    #menu-toggle:checked ~ .menu {
+        display: flex;
     }
 }
 
-}
