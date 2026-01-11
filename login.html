@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar sesión | EcoArte</title>
+    <link rel="stylesheet" href="regilogin.css">
+</head>
+
+<body>
+
+<div class="registro">
+    <h2>Iniciar sesión</h2>
+    <p>Ingrese sus datos para continuar</p>
+
+    <form onsubmit="iniciarSesion(event)">
+        <input type="email" id="correoLogin" placeholder="Correo electrónico" required>
+        <input type="password" id="passwordLogin" placeholder="Contraseña" required>
+
+        <button type="submit">Ingresar</button>
+    </form>
+
+    <div class="login">
+        <a href="registro.html">Crear una cuenta</a>
+    </div>
+
+    <footer>
+        © 2026 EcoArte. Todos los derechos reservados.<br>
+        Diseño por Orange Pear.
+    </footer>
+</div>
+
+<script>
+/* Cargar correo guardado */
+window.onload = function(){
+    const correo = localStorage.getItem("correo");
+    if(correo){
+        document.getElementById("correoLogin").value = correo;
+    }
+}
+
+/* Validar inicio de sesión */
+function iniciarSesion(e){
+    e.preventDefault();
+
+    const correo = document.getElementById("correoLogin").value;
+    const password = document.getElementById("passwordLogin").value;
+
+    if(
+        correo === localStorage.getItem("correo") &&
+        password === localStorage.getItem("password")
+    ){
+        alert("Inicio de sesión exitoso");
+        window.location.href = "index.html";
+    } else {
+        alert("Correo o contraseña incorrectos");
+    }
+}
+</script>
+
+</body>
+</html>
