@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro | EcoArte</title>
+    <link rel="stylesheet" href="regilogin.css">
+</head>
+
+<body>
+
+<div class="registro">
+    <h2>¡Regístrate!</h2>
+    <p>Ingrese sus datos para continuar</p>
+
+    <form onsubmit="guardarDatos(event)">
+        <input type="text" id="nombre" placeholder="Nombre completo" required>
+        <input type="email" id="correo" placeholder="Correo electrónico" required>
+        <input type="password" id="password" placeholder="Contraseña" required>
+        <input type="tel" id="telefono" placeholder="Teléfono" required>
+
+        <button type="submit">Registrar</button>
+    </form>
+
+    <div class="login">
+        <a href="login.html">Ya tengo cuenta</a>
+    </div>
+
+    <footer>
+        © 2026 EcoArte. Todos los derechos reservados.<br>
+        Diseño por Orange Pear.
+    </footer>
+</div>
+
+<script>
+function guardarDatos(e){
+    e.preventDefault();
+
+    localStorage.setItem("correo", document.getElementById("correo").value);
+    localStorage.setItem("password", document.getElementById("password").value);
+
+    alert("Registro guardado correctamente");
+    window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>
