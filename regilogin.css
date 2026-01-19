@@ -1,0 +1,93 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* FONDO */
+body{
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2e8b57, #6ec6a4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTENEDOR */
+.registro{
+    background: #ffffff;
+    width: 100%;
+    max-width: 380px;
+    padding: 30px 28px;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* TITULOS */
+.registro h2{
+    text-align: center;
+    color: #2e8b57;
+    margin-bottom: 8px;
+}
+
+.registro p{
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* INPUTS */
+.registro input{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.registro input:focus{
+    border-color: #2e8b57;
+    outline: none;
+}
+
+/* BOTON */
+.registro button{
+    width: 100%;
+    padding: 12px;
+    background: #2e8b57;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.registro button:hover{
+    background: #256f45;
+}
+
+/* LINK */
+.login{
+    text-align: center;
+    margin-top: 12px;
+}
+
+.login a{
+    color: #2e8b57;
+    text-decoration: none;
+}
+
+.login a:hover{
+    text-decoration: underline;
+}
+
+/* FOOTER */
+.registro footer{
+    margin-top: 18px;
+    font-size: 12px;
+    text-align: center;
+    color: #777;
+}
